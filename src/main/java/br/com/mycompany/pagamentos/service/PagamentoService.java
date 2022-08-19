@@ -20,4 +20,7 @@ public class PagamentoService {
         pagamento.valorPago();
         return pagamentoRepository.save(pagamento);
     }
+    public void excluirPagamento(Long id){
+        pagamentoRepository.deleteById(id);
+    }
 }

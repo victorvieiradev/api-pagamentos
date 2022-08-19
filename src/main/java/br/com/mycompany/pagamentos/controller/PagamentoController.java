@@ -20,5 +20,9 @@ public class PagamentoController {
     public PagamentoModel salvarPagamento(@RequestBody DadosPagamento dadosPagamento){
         return pagamentoService.salvarPagamento(dadosPagamento);
     }
+    @DeleteMapping(path = "/pagamento/{id}")
+    public void excluirPagamento(@PathVariable Long id){
+        pagamentoService.excluirPagamento(id);
+    }
 
 }
