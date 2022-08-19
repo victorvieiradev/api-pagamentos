@@ -18,6 +18,14 @@ public abstract class PagamentoModel {
     private String status;
     private BigDecimal valorApagar;
     private BigDecimal diferencaValor;
-    //private BigDecimal valorPago;
+    private BigDecimal valorPago;
+
+    public PagamentoModel(Long id, String status, BigDecimal valorApagar, BigDecimal diferencaValor) {
+        this.id = id;
+        this.status = status;
+        this.valorApagar = valorApagar;
+        this.diferencaValor = diferencaValor;
+    }
+
     public abstract BigDecimal valorPago();
 }

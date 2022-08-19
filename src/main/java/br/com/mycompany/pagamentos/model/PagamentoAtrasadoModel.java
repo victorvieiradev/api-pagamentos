@@ -9,13 +9,9 @@ public class PagamentoAtrasadoModel extends  PagamentoModel{
         super(id, status, valorAPagar, diferencaValor);
     }
 
-    public PagamentoAtrasadoModel() {
-    }
-
-
-
     @Override
     public BigDecimal valorPago() {
-        return this.getValorApagar().add(this.getDiferencaValor()) ;
+        this.setValorPago(this.getValorApagar().add(this.getDiferencaValor()) );
+        return this.getValorPago();
     }
 }

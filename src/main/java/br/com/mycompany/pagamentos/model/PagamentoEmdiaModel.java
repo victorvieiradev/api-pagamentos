@@ -9,6 +9,7 @@ public class PagamentoEmdiaModel extends PagamentoModel{
     }
     @Override
     public BigDecimal valorPago() {
-        return this.getValorApagar().subtract(this.getDiferencaValor());
+        this.setValorPago(this.getValorApagar().subtract(this.getDiferencaValor()));
+        return this.getValorPago();
     }
 }
