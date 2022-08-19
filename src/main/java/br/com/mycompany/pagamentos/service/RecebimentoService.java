@@ -21,4 +21,7 @@ public class RecebimentoService {
     public List<RecebimentoModel> exibirPagamentos(){
         return  recebimentoRepository.findAll();
     }
+    public void excluirRegistro(Long id){
+        recebimentoRepository.deleteById(id);
+    }
 }

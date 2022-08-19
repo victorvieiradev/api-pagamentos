@@ -22,5 +22,9 @@ public class RecebimentoController {
     public List<RecebimentoModel> exibirRecebimentos(){
         return recebimentoService.exibirPagamentos();
     }
+    @DeleteMapping(path = "/recebimento/{id}")
+    public void excluirRegistro(@PathVariable Long id){
+        recebimentoService.excluirRegistro(id);
+    }
 
 }
