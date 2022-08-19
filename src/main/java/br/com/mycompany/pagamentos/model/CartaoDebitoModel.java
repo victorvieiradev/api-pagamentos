@@ -15,7 +15,8 @@ public class CartaoDebitoModel extends RecebimentoModel{
     @Override
     public BigDecimal receberPagamento() {
         BigDecimal valorRecebido = this.getValorRecebido();
-        this.setValorLiquido(valorRecebido.multiply(new BigDecimal(0.025)));
+        BigDecimal porcentagem = valorRecebido.multiply(new BigDecimal(0.025));
+        this.setValorLiquido(valorRecebido.subtract(porcentagem));
         return this.getValorLiquido();
     }
 }
