@@ -17,6 +17,7 @@ public class PagamentoService {
     }
     public PagamentoModel salvarPagamento(DadosPagamento dadosPagamento){
         PagamentoModel pagamento = pagamentoFactory.gerarPagamento(dadosPagamento);
+        pagamento.valorPago();
         return pagamentoRepository.save(pagamento);
     }
 }
