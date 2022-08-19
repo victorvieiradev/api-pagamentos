@@ -10,19 +10,14 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "pagamentos")
+@Table(name = "pagamento")
 public abstract class PagamentoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String status;
-    private BigDecimal valorAPagar;
+    private BigDecimal valorApagar;
     private BigDecimal diferencaValor;
+    //private BigDecimal valorPago;
     public abstract BigDecimal valorPago();
-
-    public PagamentoModel(String status, BigDecimal valorAPagar, BigDecimal diferencaValor) {
-        this.status = status;
-        this.valorAPagar = valorAPagar;
-        this.diferencaValor = diferencaValor;
-    }
 }
