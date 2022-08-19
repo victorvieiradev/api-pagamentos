@@ -1,7 +1,10 @@
 package br.com.mycompany.pagamentos.model;
 
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Entity;
 import java.math.BigDecimal;
+@NoArgsConstructor
 @Entity
 public class PagamentoAtrasadoModel extends  PagamentoModel{
 

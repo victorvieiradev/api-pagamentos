@@ -25,6 +25,7 @@ public abstract class PagamentoModel {
         this.status = status;
         this.valorApagar = valorApagar;
         this.diferencaValor = diferencaValor;
+        this.valorPago();
     }
 
     public abstract BigDecimal valorPago();
